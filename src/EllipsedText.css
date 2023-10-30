@@ -1,0 +1,9 @@
+.ellipsed-text {
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px dashed gray;
+  margin-bottom: 10px;
+  padding: 5px;
+}
