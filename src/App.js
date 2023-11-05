@@ -9,18 +9,13 @@ import { Tooltip } from './Tooltip';
 import './App.css';
 
 function App() {
-  const [tooltipData, setTooltipData] = React.useState();
-  const onShowTooltipHandler = React.useCallback((element) => {
-    setTooltipData({element, text: element?.innerText})
-  }, []);
+  const [tooltipElement, setTooltipElement] = React.useState();
 
   return (
     <>
-      <EllipsisTooltips
-        onShowTooltip={onShowTooltipHandler}
-      />
+      <EllipsisTooltips onShowTooltip={setTooltipElement} />
       <div className='App'>
-        {tooltipData?.element && <Tooltip element={tooltipData.element} text={tooltipData.text} />}
+        {tooltipElement && <Tooltip element={tooltipElement} />}
         <EllipsedText>
           <strong>nested elements case: </strong>
           <svg width="16" height="16">

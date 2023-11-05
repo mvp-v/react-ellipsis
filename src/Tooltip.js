@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { usePopper } from 'react-popper';
 
 export function Tooltip({
-  element,
-  text
+  element
 }) {
   const [popperElement, setPopperElement] = useState(null);
   const [arrowElement, setArrowElement] = useState(null);
@@ -18,7 +17,7 @@ export function Tooltip({
       style={styles.popper}
       {...attributes.popper}
     >
-      {text}
+      {element.innerText}
       <div
         ref={setArrowElement}
         id='arrow'
