@@ -14,8 +14,8 @@ function App() {
   return (
     <>
       <EllipsisTooltips onShowTooltip={setTooltipElement} />
+      {tooltipElement && <Tooltip element={tooltipElement} />}
       <div className='App'>
-        {tooltipElement && <Tooltip element={tooltipElement} />}
         <EllipsedText>
           <strong>nested elements case: </strong>
           <svg width="16" height="16">
