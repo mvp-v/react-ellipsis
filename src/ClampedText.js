@@ -1,13 +1,13 @@
 import { loremIpsum } from 'lorem-ipsum';
 import { useMemo } from 'react';
 
-import './EllipsedText.css';
+import './ClampedText.css';
 
-export const EllipsedText = ({children}) => {
-  const wordsCount = useMemo(() => Math.ceil(20 * Math.random()), []);
+export const ClampedText = ({children}) => {
+  const wordsCount = useMemo(() => Math.ceil(40 * Math.random()), []);
   const text = useMemo(() => loremIpsum({count: wordsCount, units: 'words'}), [wordsCount]);
   return (
-    <div className='ellipsed-text'>
+    <div className='clamped-text'>
       {children}
       {text}
     </div>
